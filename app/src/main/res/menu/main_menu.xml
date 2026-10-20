@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_home"
+        android:title="Home"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_add"
+        android:title="Add a product"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_history"
+        android:title="Scan history"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_ethics"
+        android:title="Behind the brand"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_about"
+        android:title="About Depackaged"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_export_csv"
+        android:title="Export products.csv"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_change_user"
+        android:title="Account &amp; Password"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_exit"
+        android:title="Exit"
+        app:showAsAction="never" />
+
+</menu>

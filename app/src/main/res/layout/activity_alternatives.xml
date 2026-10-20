@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mustard"
+    tools:context=".AlternativesActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/cream"
+        android:elevation="4dp"
+        android:theme="@style/Depack.ToolbarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Better choices"
+        app:titleTextAppearance="@style/Depack.ToolbarTitle" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvInstead"
+                style="@style/Depack.Heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Instead of this product, try:"
+                android:textSize="22sp" />
+
+            <!-- Natural alternative -->
+            <LinearLayout
+                android:id="@+id/cardNatural"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_card"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvNaturalLabel"
+                    style="@style/Depack.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NATURAL SWAP"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivNatural"
+                        android:layout_width="84dp"
+                        android:layout_height="84dp"
+                        android:contentDescription="Natural alternative image"
+                        android:scaleType="centerCrop" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvNaturalName"
+                            style="@style/Depack.Heading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Roasted makhana" />
+
+                        <TextView
+                            android:id="@+id/tvNaturalWhy"
+                            style="@style/Depack.Body"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Why this is better." />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvNaturalTip"
+                    style="@style/Depack.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Tap the card for a habit tip."
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <!-- Better packaged alternative -->
+            <LinearLayout
+                android:id="@+id/cardPackaged"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_card"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvPackagedLabel"
+                    style="@style/Depack.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BETTER PACKAGED OPTION"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivPackaged"
+                        android:layout_width="84dp"
+                        android:layout_height="84dp"
+                        android:contentDescription="Better packaged product image"
+                        android:scaleType="centerInside" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvPackagedName"
+                            style="@style/Depack.Heading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Product name" />
+
+                        <TextView
+                            android:id="@+id/tvPackagedBrand"
+                            style="@style/Depack.Body"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Brand" />
+
+                        <TextView
+                            android:id="@+id/tvPackagedScore"
+                            style="@style/Depack.Body"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Unhealth score: 3/10"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvPackagedWhy"
+                    style="@style/Depack.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Why this is a better packaged choice." />
+
+                <Button
+                    android:id="@+id/btnViewPackaged"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/cream"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Check this product"
+                    android:textColor="@color/app_red"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:strokeColor="@color/app_red"
+                    app:strokeWidth="2dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnBackToResult"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/cream"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Back to result"
+                android:textColor="@color/app_red"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:strokeColor="@color/app_red"
+                app:strokeWidth="2dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

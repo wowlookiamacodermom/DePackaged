@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mustard"
+    tools:context=".ResultActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/cream"
+        android:elevation="4dp"
+        android:theme="@style/Depack.ToolbarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="What's inside"
+        app:titleTextAppearance="@style/Depack.ToolbarTitle" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Product header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivProduct"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:background="@drawable/bg_card"
+                    android:clickable="true"
+                    android:contentDescription="Product image"
+                    android:focusable="true"
+                    android:padding="6dp"
+                    android:scaleType="centerInside" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvProductName"
+                        style="@style/Depack.Heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Product name"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/tvBrand"
+                        style="@style/Depack.Body"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Brand" />
+
+                    <TextView
+                        android:id="@+id/tvVegTag"
+                        style="@style/Depack.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="VEG" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Unhealth meter -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvMeterTitle"
+                    style="@style/Depack.Heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="UNHEALTH METER" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvScore"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:background="@drawable/bg_score_circle"
+                        android:fontFamily="@font/climate_crisis"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="8/10"
+                        android:textColor="@color/mustard"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tvVerdict"
+                        style="@style/Depack.Heading"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_weight="1"
+                        android:text="Ultra-processed. Think twice." />
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/pbUnhealth"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="12dp"
+                    android:max="100"
+                    android:progress="80"
+                    android:progressBackgroundTint="@color/mustard"
+                    android:progressTint="@color/app_red" />
+
+            </LinearLayout>
+
+            <!-- Serving size toggle -->
+            <RadioGroup
+                android:id="@+id/rgServing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbPer100g"
+                    style="@style/Depack.Body"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/app_red"
+                    android:checked="true"
+                    android:text="Per 100 g" />
+
+                <RadioButton
+                    android:id="@+id/rbPerPack"
+                    style="@style/Depack.Body"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/app_red"
+                    android:text="Per pack" />
+
+            </RadioGroup>
+
+            <!-- Nutrition table -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_card"
+                android:padding="12dp"
+                android:stretchColumns="1">
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/Depack.Heading"
+                        android:padding="6dp"
+                        android:text="Nutrient" />
+
+                    <TextView
+                        style="@style/Depack.Heading"
+                        android:padding="6dp"
+                        android:text="Amount" />
+
+                    <TextView
+                        style="@style/Depack.Heading"
+                        android:padding="6dp"
+                        android:text="Daily limit" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/Depack.Body"
+                        android:padding="6dp"
+                        android:text="Calories" />
+
+                    <TextView
+                        android:id="@+id/tvCalories"
+                        style="@style/Depack.Body"
+                        android:padding="6dp"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/tvCaloriesPct"
+                        style="@style/Depack.Body"
+                        android:padding="6dp"
+                        android:text="-" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/Depack.Body"
+                        android:padding="6dp"
+                        android:text="Sugar" />
+
+                    <TextView
+                        android:id="@+id/tvSugar"
+                        style="@style/Depack.Body"
+                        android:padding="6dp"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/tvSugarPct"
+                        style="@style/Depack.Body"
+                        android:padding="6dp"
+                        android:text="-" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/Depack.Body"
+                        android:padding="6dp"
+                        android:text="Sodium" />
+
+                    <TextView
+                        android:id="@+id/tvSodium"
+                        style="@style/Depack.Body"
+                        android:padding="6dp"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/tvSodiumPct"
+                        style="@style/Depack.Body"
+                        android:padding="6dp"
+                        android:text="-" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/Depack.Body"
+                        android:padding="6dp"
+                        android:text="Saturated fat" />
+
+                    <TextView
+                        android:id="@+id/tvSatFat"
+                        style="@style/Depack.Body"
+                        android:padding="6dp"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/tvSatFatPct"
+                        style="@style/Depack.Body"
+                        android:padding="6dp"
+                        android:text="-" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/Depack.Body"
+                        android:padding="6dp"
+                        android:text="Total fat" />
+
+                    <TextView
+                        android:id="@+id/tvTotalFat"
+                        style="@style/Depack.Body"
+                        android:padding="6dp"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/tvTotalFatPct"
+                        style="@style/Depack.Body"
+                        android:padding="6dp"
+                        android:text="-" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/Depack.Body"
+                        android:padding="6dp"
+                        android:text="Protein" />
+
+                    <TextView
+                        android:id="@+id/tvProtein"
+                        style="@style/Depack.Body"
+                        android:padding="6dp"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/tvProteinPct"
+                        style="@style/Depack.Body"
+                        android:padding="6dp"
+                        android:text="-" />
+                </TableRow>
+
+            </TableLayout>
+
+            <!-- Plain-language comparison -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvFlagsTitle"
+                    style="@style/Depack.Heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RED FLAGS" />
+
+                <TextView
+                    android:id="@+id/tvRedFlags"
+                    style="@style/Depack.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="That is as much sugar as 7 teaspoons.\nHigh in sodium.\nContains additives." />
+
+            </LinearLayout>
+
+            <!-- Behind the brand: who owns this product -->
+            <LinearLayout
+                android:id="@+id/cardBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/Depack.Heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BEHIND THE BRAND" />
+
+                <TextView
+                    android:id="@+id/tvOwner"
+                    style="@style/Depack.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Made by a large company." />
+
+                <Button
+                    android:id="@+id/btnBehindBrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/cream"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Who is behind this?"
+                    android:textColor="@color/app_red"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:strokeColor="@color/app_red"
+                    app:strokeWidth="2dp" />
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/cbSaveHistory"
+                style="@style/Depack.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:buttonTint="@color/app_red"
+                android:checked="true"
+                android:text="Save this scan to my history" />
+
+            <Button
+                android:id="@+id/btnAlternatives"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/cream"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="See healthier alternatives"
+                android:textColor="@color/app_red"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:strokeColor="@color/app_red"
+                app:strokeWidth="2dp" />
+
+            <Button
+                android:id="@+id/btnScanAgain"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/cream"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Scan another product"
+                android:textColor="@color/app_red"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:strokeColor="@color/app_red"
+                app:strokeWidth="2dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mustard"
+    tools:context=".EthicsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/cream"
+        android:elevation="4dp"
+        android:theme="@style/Depack.ToolbarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Behind the brand"
+        app:titleTextAppearance="@style/Depack.ToolbarTitle" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvEthicsIntro"
+                style="@style/Depack.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Who makes your food, and what has been reported about how they operate? Pick a company." />
+
+            <!-- Fill this spinner from your CSV in Java -->
+            <Spinner
+                android:id="@+id/spCompany"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_input"
+                android:paddingStart="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvCompanyName"
+                    style="@style/Depack.Heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Company name"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/tvConcernLabel"
+                    style="@style/Depack.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="REPORTED CONCERN"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvConcern"
+                    style="@style/Depack.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="One-line summary of what was reported." />
+
+                <TextView
+                    android:id="@+id/tvSourceLabel"
+                    style="@style/Depack.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="SOURCE AND YEAR"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvSource"
+                    style="@style/Depack.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:autoLink="web"
+                    android:text="Source name, year"
+                    android:textColorLink="@color/ink" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvDisclaimer"
+                style="@style/Depack.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="These are reported allegations from the sources shown, not court findings. Always read the original source." />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

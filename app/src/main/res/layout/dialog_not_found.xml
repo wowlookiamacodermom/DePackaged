@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Inflate this inside an AlertDialog for the "product not found" pop-up -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mustard"
+    android:orientation="vertical"
+    android:padding="22dp">
+
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        style="@style/Depack.Heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Product not found"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tvDialogMessage"
+        style="@style/Depack.Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="We do not have this barcode yet. Check the number, or try another product." />
+
+    <EditText
+        android:id="@+id/etSuggestName"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_input"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:hint="Product name (optional)"
+        android:importantForAutofill="no"
+        android:inputType="textCapWords"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:textColor="@color/app_red"
+        android:textColorHint="#80FF0000"
+        android:textSize="16sp" />
+
+</LinearLayout>

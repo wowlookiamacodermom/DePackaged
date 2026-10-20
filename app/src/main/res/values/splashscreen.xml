@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme -->
+    <style name="Theme.MyApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Your app's main theme settings -->
+    </style>
+
+    <!-- Splash Screen Theme -->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <!-- Background color of the splash screen -->
+        <item name="windowSplashScreenBackground">@color/white</item>
+
+        <!-- Centered icon (Vector drawable or PNG) -->
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+
+        <!-- Theme to switch to automatically after the splash screen hides -->
+        <item name="postSplashScreenTheme">@style/Theme.MADPROJECTNAMEDEPACKAGED</item>
+    </style>
+</resources>

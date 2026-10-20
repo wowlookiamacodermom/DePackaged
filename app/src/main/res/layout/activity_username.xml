@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mustard"
+    tools:context=".UsernameActivity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvAppName"
+            style="@style/Depack.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Depackaged" />
+
+        <TextView
+            android:id="@+id/tvAsk"
+            style="@style/Depack.Heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="What should we call you?"
+            android:textSize="22sp" />
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_input"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:hint="Enter username"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:maxLength="20"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/app_red"
+            android:textColorHint="#80FF0000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:hint="Enter password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/app_red"
+            android:textColorHint="#80FF0000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvNote"
+            style="@style/Depack.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Protected with username and password." />
+
+        <Button
+            android:id="@+id/btnContinue"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/cream"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Continue"
+            android:textColor="@color/app_red"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:strokeColor="@color/app_red"
+            app:strokeWidth="2dp" />
+
+        <TextView
+            android:id="@+id/tvSwitchMode"
+            style="@style/Depack.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:padding="8dp"
+            android:text="Need a new account? Tap here"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

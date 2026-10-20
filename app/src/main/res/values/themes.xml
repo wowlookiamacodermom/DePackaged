@@ -1,9 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.MADPROJECTNAMEDEPACKAGED" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+    <!-- Base application theme (Material 3, so the outlined buttons work) -->
+    <style name="Base.Theme.MADPROJECTNAMEDEPACKAGED"
+        parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your theme here -->
     </style>
 
-    <style name="Theme.MADPROJECTNAMEDEPACKAGED" parent="Base.Theme.MADPROJECTNAMEDEPACKAGED" />
+    <style name="Theme.MADPROJECTNAMEDEPACKAGED"
+        parent="Base.Theme.MADPROJECTNAMEDEPACKAGED" />
+
 </resources>

@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mustard"
+    tools:context=".AddProductActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/cream"
+        android:elevation="4dp"
+        android:theme="@style/Depack.ToolbarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Add a product"
+        app:titleTextAppearance="@style/Depack.ToolbarTitle" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvAddIntro"
+                style="@style/Depack.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cannot find your product? Add it from the label on the pack. It is saved on this phone and works the next time you scan." />
+
+            <TextView
+                style="@style/Depack.Heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="THE PRODUCT" />
+
+            <TextView
+                style="@style/Depack.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Barcode (8 to 14 digits)" />
+
+            <EditText
+                android:id="@+id/etBarcode"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_input"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:hint="e.g. 8901058000290"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="14"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/app_red"
+                android:textColorHint="#80FF0000"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/Depack.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Product name" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_input"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:hint="e.g. Maggi 2-minute Noodles"
+                android:importantForAutofill="no"
+                android:inputType="textCapWords"
+                android:maxLength="60"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/app_red"
+                android:textColorHint="#80FF0000"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/Depack.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Brand" />
+
+            <EditText
+                android:id="@+id/etBrand"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_input"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:hint="e.g. Maggi"
+                android:importantForAutofill="no"
+                android:inputType="textCapWords"
+                android:maxLength="40"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/app_red"
+                android:textColorHint="#80FF0000"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/Depack.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Company that owns the brand (optional)" />
+
+            <EditText
+                android:id="@+id/etCompany"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_input"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:hint="e.g. Nestle"
+                android:importantForAutofill="no"
+                android:inputType="textCapWords"
+                android:maxLength="40"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/app_red"
+                android:textColorHint="#80FF0000"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/Depack.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Vegetarian or not (see the green or red dot on the pack)" />
+
+            <RadioGroup
+                android:id="@+id/rgVeg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbVeg"
+                    style="@style/Depack.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/app_red"
+                    android:checked="true"
+                    android:text="Veg" />
+
+                <RadioButton
+                    android:id="@+id/rbNonVeg"
+                    style="@style/Depack.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:buttonTint="@color/app_red"
+                    android:text="Non-veg" />
+            </RadioGroup>
+
+            <TextView
+                style="@style/Depack.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Category" />
+
+            <Spinner
+                android:id="@+id/spCategory"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_input" />
+
+            <TextView
+                style="@style/Depack.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Pack size in grams or ml (optional)" />
+
+            <EditText
+                android:id="@+id/etPack"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_input"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:hint="e.g. 70"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/app_red"
+                android:textColorHint="#80FF0000"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/Depack.Heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="NUTRITION PER 100 g (or 100 ml)" />
+
+            <TextView
+                style="@style/Depack.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Copy these from the Nutrition Information table on the pack. If it only shows per serving, convert it to 100 g." />
+
+            <TextView
+                style="@style/Depack.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Energy (kcal)" />
+
+            <EditText
+                android:id="@+id/etCalories"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_input"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:hint="e.g. 430"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/app_red"
+                android:textColorHint="#80FF0000"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/Depack.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Sugar (g)" />
+
+            <EditText
+                android:id="@+id/etSugar"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_input"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:hint="e.g. 3.5"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:maxLength="6"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/app_red"
+                android:textColorHint="#80FF0000"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/Depack.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Sodium (mg, not grams)" />
+
+            <EditText
+                android:id="@+id/etSodium"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_input"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:hint="e.g. 1100"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/app_red"
+                android:textColorHint="#80FF0000"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/Depack.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Saturated fat (g)" />
+
+            <EditText
+                android:id="@+id/etSatFat"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_input"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:hint="e.g. 6"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:maxLength="6"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/app_red"
+                android:textColorHint="#80FF0000"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/Depack.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Total fat (g)" />
+
+            <EditText
+                android:id="@+id/etFat"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_input"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:hint="e.g. 15"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:maxLength="6"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/app_red"
+                android:textColorHint="#80FF0000"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/Depack.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Protein (g)" />
+
+            <EditText
+                android:id="@+id/etProtein"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_input"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:hint="e.g. 8"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:maxLength="6"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/app_red"
+                android:textColorHint="#80FF0000"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/Depack.Heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="A HEALTHIER SWAP (optional)" />
+
+            <TextView
+                style="@style/Depack.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Fruit, vegetable or whole food to eat instead" />
+
+            <EditText
+                android:id="@+id/etNaturalAlt"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_input"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:hint="e.g. Roasted makhana"
+                android:importantForAutofill="no"
+                android:inputType="textCapSentences"
+                android:maxLength="50"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/app_red"
+                android:textColorHint="#80FF0000"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/Depack.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Why it is better" />
+
+            <EditText
+                android:id="@+id/etNaturalWhy"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_input"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:hint="e.g. Fibre and no added salt"
+                android:importantForAutofill="no"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLength="120"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/app_red"
+                android:textColorHint="#80FF0000"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnSaveProduct"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/cream"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Save product"
+                android:textColor="@color/app_red"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:strokeColor="@color/app_red"
+                app:strokeWidth="2dp" />
+
+            <Button
+                android:id="@+id/btnCancelAdd"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/cream"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Cancel"
+                android:textColor="@color/app_red"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:strokeColor="@color/app_red"
+                app:strokeWidth="2dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

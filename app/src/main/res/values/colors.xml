@@ -2,4 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name ="mustard">#FFEB3B</color>
+    <color name="app_red">#FF0000</color>
+    <color name="cream">#FFF3C4</color>
+    <color name="ink">#3B0000</color>
+    <color name="score_green">#1B7F3B</color>
+    <color name="score_amber">#B26A00</color>
+    <color name="score_red">#C62828</color>
 </resources>

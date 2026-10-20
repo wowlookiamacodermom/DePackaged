@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/akshar_semibold</item>
+        <item>@font/anton</item>
+        <item>@font/climate_crisis</item>
+        <item>@font/spirax</item>
+    </array>
+</resources>

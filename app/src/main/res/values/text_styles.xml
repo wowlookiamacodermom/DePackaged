@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base style for Depack styles -->
+    <style name="Depack" />
+
+    <!-- Big app title: Climate Crisis font, logo colour -->
+    <style name="Depack.Title">
+        <item name="android:fontFamily">@font/climate_crisis</item>
+        <item name="android:textColor">@color/app_red</item>
+        <item name="android:textSize">38sp</item>
+    </style>
+
+    <!-- Screen headings and card titles: condensed bold, logo colour -->
+    <style name="Depack.Heading">
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:textColor">@color/app_red</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Normal text -->
+    <style name="Depack.Body">
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:textColor">@color/app_red</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Captions and small print -->
+    <style name="Depack.Small">
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:textColor">@color/app_red</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <!-- Toolbar title: signature Climate Crisis brand font, sized to fit without truncation -->
+    <style name="Depack.ToolbarTitle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:fontFamily">@font/climate_crisis</item>
+        <item name="android:textColor">@color/app_red</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <!-- Makes the menu (three dots) icon use the logo colour -->
+    <style name="Depack.ToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorControlNormal">@color/app_red</item>
+    </style>
+
+    <!-- Dropdown (three dots) menu: cream panel, red outline, red condensed text -->
+    <style name="Depack.PopupTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="popupMenuStyle">@style/Depack.PopupMenu</item>
+        <item name="textAppearanceLargePopupMenu">@style/Depack.PopupText</item>
+        <item name="textAppearanceSmallPopupMenu">@style/Depack.PopupText</item>
+    </style>
+
+    <style name="Depack.PopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@drawable/bg_popup_menu</item>
+    </style>
+
+    <style name="Depack.PopupText" parent="TextAppearance.AppCompat.Widget.PopupMenu.Large">
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:textColor">@color/app_red</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

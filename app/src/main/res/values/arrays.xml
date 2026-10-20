@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="rating_filter">
+        <item>All scans</item>
+        <item>Green - better choice</item>
+        <item>Amber - okay sometimes</item>
+        <item>Red - avoid</item>
+    </string-array>
+</resources>
